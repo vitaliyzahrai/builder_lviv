@@ -1,54 +1,394 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
 
-html{
-    height: 100%;
-}
+    html{
+        height: 100%;
+    }
 
-body{
-    height: 100%;
-}
+    body{
+        height: 100%;
+    }
 
 
-// Gilroy font
+    // Gilroy font
 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../builder_lviv/fonts/Gilroy/Gilroy-Light.eot');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../builder_lviv/fonts/Gilroy/Gilroy-Regular.eot');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../builder_lviv/fonts/Gilroy/Gilroy-Medium.eot');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../builder_lviv/fonts/Gilroy/Gilroy-SemiBold.eot');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../builder_lviv/fonts/Gilroy/Gilroy-Bold.eot');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../builder_lviv/fonts/Gilroy/Gilroy-Black.eot');
-    font-weight: 900;
-    font-style: normal;
-}
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('../builder_lviv_test/fonts/Gilroy/Gilroy-Light.eot');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('../builder_lviv_test/fonts/Gilroy/Gilroy-Regular.eot');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('../builder_lviv_test/fonts/Gilroy/Gilroy-Medium.eot');
+        font-weight: 500;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('../builder_lviv_test/fonts/Gilroy/Gilroy-SemiBold.eot');
+        font-weight: 600;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('../builder_lviv_test/fonts/Gilroy/Gilroy-Bold.eot');
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Gilroy';
+        src: url('../builder_lviv_test/fonts/Gilroy/Gilroy-Black.eot');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+
+
+    // Specific Styles
+
+    .lock{
+        overflow: hidden;
+    }
+
+
+    .title-h1{
+        color: #FFF;
+        font-size: 40px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        line-height: 56px;
+    }
+
+
+    .title-h3{
+        color: #FFF;
+        font-size: 18px;
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0.2px;
+    }
+
+
+    .title-h4{
+        color: #FF9900;
+        font-size: 18px;
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 25px;
+        letter-spacing: 9.7px;
+    }
+
+
+    .title-h5{
+        color: #FFFFFF;
+        font-size: 16px;
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 300;
+        line-height: 18px;
+    }
+
+
+    .btn-info{
+        padding: 8px 12px;
+        font-size: 16px;
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: -0.015em;
+        outline: none;
+    }
+
+
+    .title-all{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 250px;
+        width: 100%;
+        padding-right: 8px; 
+        padding-left: 8px;
+    }
+
+
+    .logo{
+        float: left;
+        color: #FF9900;
+        font-family: 'Gilroy', sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+
+
+    .social{
+        a{
+            color: #FFF;
+            &:hover{
+                transition: .3s;
+                color: #FF9900;
+            }
+            &:not(:first-child){
+                margin-left: 22px;
+            }
+        }
+    }
+
+
+    .left-container, .right-container{
+        position: relative;
+        min-height: 766px;
+        padding: 30px 15px;
+        width: 100%;
+    }
+
+
+    // Navigation SECTION
+
+    .navigation{
+        min-height: 100%;
+        background-image: url('image/bg-banner.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+        .header_burger{
+            display: none;
+        }
+
+        .header-top{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+
+            .header-menu-top{
+                height: 54px;
+                background-color: rgba(0, 0, 0, 0.31);
+                padding: 16px 16px 0 16px;
+                .header-menu-ul-top{
+                    padding: 0;
+                    margin: 0;
+                    float: right;
+                    .menu-item-top{
+                        display: inline-block;
+                        color: #FFF;
+                        font-family: 'Gilroy', sans-serif;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        letter-spacing: -0.015em;
+                        &:nth-child(2){
+                            padding-right: 80px;
+                            padding-left: 40px; 
+                        }
+                    }	
+                }
+            }
+            //.header-menu-top
+            
+            .header-menu-bottom{
+                height: 54px;
+                padding: 16px 16px 0 16px;
+                .header-menu-nav-bottom{
+                    float: right;
+                    .menu-item-bottom{
+                        display: inline-block;
+                        padding-left: 57px;
+                        a{
+                            color: #FFF;
+                            font-size: 18px;
+                            font-family: 'Gilroy', sans-serif;
+                            font-weight: 400;
+                            text-decoration: none;
+                            &:hover{
+                                transition: .2s;
+                                color: #FF9900;
+                                border-bottom: 2px solid #FF9900;
+                            }
+                        }
+                        .btn-menu{
+                            color: #FF9900;
+                            border: 2px solid #FF9900;
+                            background-color: transparent;
+                            &:hover{
+                                transition: .2s;
+                                background-color: #FF9900;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+            //.header-menu-bottom
+
+        }
+        //.header-top
+
+        .header-center{
+            .table{
+                min-height: calc(100vh - 170px);
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                .cell{
+                    vertical-align: middle;
+                    border: none;
+                    padding: 0!important;
+                    .content-info{
+                        width: 100%;
+                        max-width: 820px;
+                        .title-h1{
+                            padding-top: 136px;
+                            padding-bottom: 29px;
+                        }
+                        .btn-table{
+                            margin-top: 60px;
+                            margin-bottom: 40px;
+                            color: #FFF;
+                            background-color:#FF9900;
+                            border: none;
+                        }
+                    }
+                }
+                td{
+                    padding: 0!important;
+                }
+            }
+        }
+        //.header-center
+        
+        .header-bottom{
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(26px);
+            .header-bottom-info{
+                position: relative;
+                max-width: 280px;
+                margin: 0 auto;
+                padding: 10px 5px;
+                .header-bottom-text{
+                    min-height: 170px;
+                    display: flex;
+                    align-items: center;
+                    color: #FFFFFF;
+                    font-size: 20px;
+                    font-family: 'Gilroy', sans-serif;
+                    font-weight: 600;
+                    line-height: 28px;
+                    letter-spacing: 0.2px;
+                    margin: auto 30px;
+                    &:hover{
+                        transition: .2s;
+                        color: #FF9900;
+                        cursor: pointer;
+                    }
+                }
+                img{
+                    position: absolute;
+                    top: calc(50% - 46px);
+                    left: calc(50% + 46px * 0.5);
+                    height: 92px;
+                    width: 92px;
+                    z-index: -1;
+                }
+            }
+        }
+        //.header-bottom
+    }
+
+
+
+    // About SECTION
+
+    .about-section{
+        display: flex;
+        justify-content: start;
+        overflow: hidden;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        .left-container{
+            max-width: 550px;
+            background-image: url('image/charles-deluvio.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            .exp-box{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background-color: #FFB800;
+                width: 238px;
+                height: 220px;
+                p:nth-child(1){
+                    margin-left: 34px;
+                    margin-bottom: 0;
+                    color: #FFFFFF;
+                    font-size: 70px;
+                    font-family: 'Playfair Display', serif;
+                    font-weight: 400;
+                }
+                p:nth-child(2){
+                    margin: auto 34px;
+                    color: #FFFFFF;
+                    font-size: 30px;
+                    font-family: 'Gilroy', sans-serif;
+                    font-weight: 400;
+                }
+            }
+        }
+        //.left-container
+
+        .right-container{
+            max-width: 900px;
+            display: flex;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 40%;
+                left: 40%;
+                bottom: -100px;
+                right: -100px;
+                z-index: -1;
+                background-image: url("image/two-bedroom-bg.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top left;
+                max-width: 650px;
+                max-height: 650px;
+            }
+            .right-container-center{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 600px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 8px;
+                .title-h1{
+                    padding-bottom: 28px;
+                    color: #000;
+                }
+                .title-h3{
+                    color: #7C7C7C;
+                    padding-left: 15px;
+                }
+            }
+        }
+        //.right-container
+    }
