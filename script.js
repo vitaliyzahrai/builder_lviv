@@ -13,7 +13,7 @@ $(document).ready(function(){
     });
 
   
-    
+
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -55,6 +55,12 @@ $(document).ready(function(){
         
       });
 
-
+      $('.slider-reviews').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        adaptiveHeight: true,
+        focusOnSelect: true
+      });  
 
 });
