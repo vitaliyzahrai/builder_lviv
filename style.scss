@@ -14,6 +14,7 @@ body{
 }
 
 
+
 // Gilroy font
 
 @font-face {
@@ -154,6 +155,7 @@ body{
     padding: 30px 15px;
     width: 100%;
 }
+
 
 
 // Navigation SECTION
@@ -392,6 +394,7 @@ body{
     }
     //.right-container
 }
+
 
 
 // Works SECTION
@@ -732,8 +735,116 @@ body{
 
 
 
+// Reviews SECTION
 
+.reviews-section{
+    min-height: 671px;
+    background-image: url('image/bg-reviews.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
+    .container-reviews{
+        max-width: 671px;
+        min-height: 671px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(26px);
+        
+        .content-info-reviews{
+            width: 100%;
+            max-width: 490px;
+
+            .reviews-title{
+                text-align: center;
+                min-height: 320px;
+            }
+            //.reviews-title
+
+            .slider-reviews{
+                padding: 0 8px;
+                margin: 0;
+
+                .reviews-item{
+                    .title-h5{
+                        letter-spacing: 0.01em;
+                        text-align: center;
+                    }
+                    .reviews-info{
+                        color: #FFFFFF;
+                        font-size: 20px;
+                        font-family: 'Gilroy', sans-serif;
+                        font-weight: 500;
+                        line-height: 24px;
+                        letter-spacing: -0.015em;
+                        text-align: center;
+                    }
+                }
+                //.reviews-item
+
+                .slick-dots{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: -36%;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    li{
+                        margin: 0 10px;
+                        list-style: none;
+                        button{
+                            width: 10px;
+                            height: 10px;
+                            background-color: rgba(196, 196, 196, 0.45);
+                            border-radius: 50%;
+                            &::before{
+                                content: '';
+                            }
+                        }
+                    }
+                    .slick-active{
+                        button{
+                            background-color: #FFB800;
+                        }
+                    }
+                }
+                //.slick-dots
+
+                .slick-next{
+                    right: 20%;
+                    background: url(image/arrow-right.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &::before{
+                        font-size: 0;
+                    }
+                }
+
+                .slick-prev{
+                    left: 20%;
+                    background: url(image/arrow-left.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &::before{
+                        font-size: 0;
+                    }
+                }
+
+                .slick-arrow{
+                    height: 28px;
+                    width: 28px;
+                    top: 130%;
+                    z-index: 1;
+                }
+
+            }
+            //.slider-reviews
+        }
+        //.content-info-reviews
+    }
+    //.container-reviews
+}
 
 
 
@@ -752,6 +863,7 @@ body{
        } 
     }
     //.portfolio-section
+
 
     .work-section{
         --step-size: 190px;
@@ -777,10 +889,12 @@ body{
     }
     //.navigation
 
+
     .work-section{
         --step-size: 170px;
     }
     //.work-section
+
 
     .portfolio-section{
         .portfolio-title{
@@ -792,6 +906,11 @@ body{
                 max-width: 100%;
                 min-height: 400px;
                 padding-bottom: 30px;
+                &::before{
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                } 
                 .left-container-center{
                     max-width: 936px;
                 }
@@ -802,20 +921,6 @@ body{
         }
     }
     //.portfolio-section
-
-
-    .portfolio-section{
-        .portfolio-content{
-            .left-container{
-                &::before{
-                    left: 0;
-                    right: 0;
-                    margin: 0 auto;
-                } 
-            }
-        }
-    }
-    //.portfolio-section  
 
 }
 // @media (max-width: 1199px)
@@ -985,6 +1090,7 @@ body{
     }
     //.about-section
 
+
     .work-section{
         .row [class^="col"]:nth-child(3n){
             .work-step{
@@ -1050,6 +1156,7 @@ body{
     }
     //.work-section
 
+
     .portfolio-section{
         .portfolio-content{
             .right-container{
@@ -1074,6 +1181,7 @@ body{
     //.portfolio-section
 
 }
+// @media (max-width: 767px)
 
 
 @media only screen and (max-width: 600px) {
@@ -1101,6 +1209,7 @@ body{
     //.portfolio-section
 
 }
+// @media (max-width: 600px)
 
 
 @media only screen and (max-width: 576px) {
@@ -1115,6 +1224,7 @@ body{
     }
     //.about-section
 
+
     .work-section{
         --step-size: 150px;
     }
@@ -1122,3 +1232,4 @@ body{
 
 
 }
+// @media (max-width: 576px)
